@@ -1,0 +1,1071 @@
+=> Booting Puma
+=> Rails 7.0.3.1 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.4 (ruby 3.1.0-p0) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 73063
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/examples" for 127.0.0.1 at 2022-07-22 15:13:04 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QueryController#examples as HTML
+  [1m[36mOrder Sum (0.0ms)[0m  [1m[34mSELECT SUM(age) FROM users WHERE name = 'Bob';) FROM "orders"[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mOrder Delete All (0.9ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 43], ["admin", 0], ["created_at", "2022-07-22 19:13:04.053325"], ["updated_at", "2022-07-22 19:13:04.053325"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 50], ["admin", 0], ["created_at", "2022-07-22 19:13:04.055171"], ["updated_at", "2022-07-22 19:13:04.055171"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 76], ["admin", 0], ["created_at", "2022-07-22 19:13:04.056490"], ["updated_at", "2022-07-22 19:13:04.056490"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 48], ["admin", 0], ["created_at", "2022-07-22 19:13:04.057863"], ["updated_at", "2022-07-22 19:13:04.057863"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 65], ["admin", 0], ["created_at", "2022-07-22 19:13:04.059037"], ["updated_at", "2022-07-22 19:13:04.059037"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 35], ["admin", 1], ["created_at", "2022-07-22 19:13:04.060298"], ["updated_at", "2022-07-22 19:13:04.060298"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 895], ["total", 10], ["created_at", "2022-07-22 19:13:04.062941"], ["updated_at", "2022-07-22 19:13:04.062941"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 896], ["total", 500], ["created_at", "2022-07-22 19:13:04.064245"], ["updated_at", "2022-07-22 19:13:04.064245"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 898], ["total", 1], ["created_at", "2022-07-22 19:13:04.065501"], ["updated_at", "2022-07-22 19:13:04.065501"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE (id = 1) OR 1=1--)[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 74], ["admin", 0], ["created_at", "2022-07-22 19:13:04.068906"], ["updated_at", "2022-07-22 19:13:04.068906"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 22], ["admin", 0], ["created_at", "2022-07-22 19:13:04.070319"], ["updated_at", "2022-07-22 19:13:04.070319"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 65], ["admin", 0], ["created_at", "2022-07-22 19:13:04.071688"], ["updated_at", "2022-07-22 19:13:04.071688"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 74], ["admin", 0], ["created_at", "2022-07-22 19:13:04.073037"], ["updated_at", "2022-07-22 19:13:04.073037"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 32], ["admin", 0], ["created_at", "2022-07-22 19:13:04.074411"], ["updated_at", "2022-07-22 19:13:04.074411"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 68], ["admin", 1], ["created_at", "2022-07-22 19:13:04.075617"], ["updated_at", "2022-07-22 19:13:04.075617"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 901], ["total", 10], ["created_at", "2022-07-22 19:13:04.077199"], ["updated_at", "2022-07-22 19:13:04.077199"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 902], ["total", 500], ["created_at", "2022-07-22 19:13:04.078369"], ["updated_at", "2022-07-22 19:13:04.078369"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 904], ["total", 1], ["created_at", "2022-07-22 19:13:04.079617"], ["updated_at", "2022-07-22 19:13:04.079617"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id = NULL AND admin = '') OR 1=1--')[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 901]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 902]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 903]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 904]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 905]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 906]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 45], ["admin", 0], ["created_at", "2022-07-22 19:13:04.097441"], ["updated_at", "2022-07-22 19:13:04.097441"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 75], ["admin", 0], ["created_at", "2022-07-22 19:13:04.099030"], ["updated_at", "2022-07-22 19:13:04.099030"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 20], ["admin", 0], ["created_at", "2022-07-22 19:13:04.100515"], ["updated_at", "2022-07-22 19:13:04.100515"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 74], ["admin", 0], ["created_at", "2022-07-22 19:13:04.101998"], ["updated_at", "2022-07-22 19:13:04.101998"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 53], ["admin", 0], ["created_at", "2022-07-22 19:13:04.103480"], ["updated_at", "2022-07-22 19:13:04.103480"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 36], ["admin", 1], ["created_at", "2022-07-22 19:13:04.104807"], ["updated_at", "2022-07-22 19:13:04.104807"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 907], ["total", 10], ["created_at", "2022-07-22 19:13:04.106470"], ["updated_at", "2022-07-22 19:13:04.106470"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 908], ["total", 500], ["created_at", "2022-07-22 19:13:04.107661"], ["updated_at", "2022-07-22 19:13:04.107661"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 910], ["total", 1], ["created_at", "2022-07-22 19:13:04.108921"], ["updated_at", "2022-07-22 19:13:04.108921"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE (name = '') or (SELECT 1 AS one FROM 'orders' WHERE total > 100 AND ''='') LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mOrder Delete All (0.5ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 58], ["admin", 0], ["created_at", "2022-07-22 19:13:04.112590"], ["updated_at", "2022-07-22 19:13:04.112590"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 53], ["admin", 0], ["created_at", "2022-07-22 19:13:04.113980"], ["updated_at", "2022-07-22 19:13:04.113980"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 68], ["admin", 0], ["created_at", "2022-07-22 19:13:04.115152"], ["updated_at", "2022-07-22 19:13:04.115152"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 51], ["admin", 0], ["created_at", "2022-07-22 19:13:04.116539"], ["updated_at", "2022-07-22 19:13:04.116539"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 24], ["admin", 0], ["created_at", "2022-07-22 19:13:04.118096"], ["updated_at", "2022-07-22 19:13:04.118096"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 55], ["admin", 1], ["created_at", "2022-07-22 19:13:04.119526"], ["updated_at", "2022-07-22 19:13:04.119526"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 913], ["total", 10], ["created_at", "2022-07-22 19:13:04.121281"], ["updated_at", "2022-07-22 19:13:04.121281"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 914], ["total", 500], ["created_at", "2022-07-22 19:13:04.122487"], ["updated_at", "2022-07-22 19:13:04.122487"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 916], ["total", 1], ["created_at", "2022-07-22 19:13:04.123653"], ["updated_at", "2022-07-22 19:13:04.123653"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (admin = '1') LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (eval):1:in `block in examples'
+  [1m[36mOrder Delete All (0.5ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 19], ["admin", 0], ["created_at", "2022-07-22 19:13:04.126838"], ["updated_at", "2022-07-22 19:13:04.126838"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 37], ["admin", 0], ["created_at", "2022-07-22 19:13:04.128236"], ["updated_at", "2022-07-22 19:13:04.128236"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 52], ["admin", 0], ["created_at", "2022-07-22 19:13:04.129525"], ["updated_at", "2022-07-22 19:13:04.129525"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 50], ["admin", 0], ["created_at", "2022-07-22 19:13:04.130735"], ["updated_at", "2022-07-22 19:13:04.130735"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 58], ["admin", 0], ["created_at", "2022-07-22 19:13:04.131969"], ["updated_at", "2022-07-22 19:13:04.131969"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 45], ["admin", 1], ["created_at", "2022-07-22 19:13:04.133340"], ["updated_at", "2022-07-22 19:13:04.133340"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 919], ["total", 10], ["created_at", "2022-07-22 19:13:04.135101"], ["updated_at", "2022-07-22 19:13:04.135101"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 920], ["total", 500], ["created_at", "2022-07-22 19:13:04.136375"], ["updated_at", "2022-07-22 19:13:04.136375"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 922], ["total", 1], ["created_at", "2022-07-22 19:13:04.137533"], ["updated_at", "2022-07-22 19:13:04.137533"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM users WHERE admin = '1' OR ''=?; WHERE "users"."admin" = ?[0m  [["admin", 0]]
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.3ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 68], ["admin", 0], ["created_at", "2022-07-22 19:13:04.140612"], ["updated_at", "2022-07-22 19:13:04.140612"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 19], ["admin", 0], ["created_at", "2022-07-22 19:13:04.141961"], ["updated_at", "2022-07-22 19:13:04.141961"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 77], ["admin", 0], ["created_at", "2022-07-22 19:13:04.143352"], ["updated_at", "2022-07-22 19:13:04.143352"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 54], ["admin", 0], ["created_at", "2022-07-22 19:13:04.144715"], ["updated_at", "2022-07-22 19:13:04.144715"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 64], ["admin", 0], ["created_at", "2022-07-22 19:13:04.146088"], ["updated_at", "2022-07-22 19:13:04.146088"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 31], ["admin", 1], ["created_at", "2022-07-22 19:13:04.147274"], ["updated_at", "2022-07-22 19:13:04.147274"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 925], ["total", 10], ["created_at", "2022-07-22 19:13:04.149060"], ["updated_at", "2022-07-22 19:13:04.149060"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 926], ["total", 500], ["created_at", "2022-07-22 19:13:04.150358"], ["updated_at", "2022-07-22 19:13:04.150358"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 928], ["total", 1], ["created_at", "2022-07-22 19:13:04.154732"], ["updated_at", "2022-07-22 19:13:04.154732"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ? GROUP BY name UNION SELECT * FROM users[0m  [["admin", 0]]
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.5ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 23], ["admin", 0], ["created_at", "2022-07-22 19:13:04.165165"], ["updated_at", "2022-07-22 19:13:04.165165"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 24], ["admin", 0], ["created_at", "2022-07-22 19:13:04.170198"], ["updated_at", "2022-07-22 19:13:04.170198"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 22], ["admin", 0], ["created_at", "2022-07-22 19:13:04.177095"], ["updated_at", "2022-07-22 19:13:04.177095"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 37], ["admin", 0], ["created_at", "2022-07-22 19:13:04.188302"], ["updated_at", "2022-07-22 19:13:04.188302"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 67], ["admin", 0], ["created_at", "2022-07-22 19:13:04.189624"], ["updated_at", "2022-07-22 19:13:04.189624"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 63], ["admin", 1], ["created_at", "2022-07-22 19:13:04.190902"], ["updated_at", "2022-07-22 19:13:04.190902"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 931], ["total", 10], ["created_at", "2022-07-22 19:13:04.192486"], ["updated_at", "2022-07-22 19:13:04.192486"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 932], ["total", 500], ["created_at", "2022-07-22 19:13:04.193680"], ["updated_at", "2022-07-22 19:13:04.193680"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 934], ["total", 1], ["created_at", "2022-07-22 19:13:04.194884"], ["updated_at", "2022-07-22 19:13:04.194884"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ? GROUP BY "orders"."user_id" HAVING (total > 1) UNION SELECT * FROM orders--)[0m  [["user_id", 1]]
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 20], ["admin", 0], ["created_at", "2022-07-22 19:13:04.198064"], ["updated_at", "2022-07-22 19:13:04.198064"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 49], ["admin", 0], ["created_at", "2022-07-22 19:13:04.199345"], ["updated_at", "2022-07-22 19:13:04.199345"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 55], ["admin", 0], ["created_at", "2022-07-22 19:13:04.200635"], ["updated_at", "2022-07-22 19:13:04.200635"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 42], ["admin", 0], ["created_at", "2022-07-22 19:13:04.201868"], ["updated_at", "2022-07-22 19:13:04.201868"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 54], ["admin", 0], ["created_at", "2022-07-22 19:13:04.203062"], ["updated_at", "2022-07-22 19:13:04.203062"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 55], ["admin", 1], ["created_at", "2022-07-22 19:13:04.204198"], ["updated_at", "2022-07-22 19:13:04.204198"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 937], ["total", 10], ["created_at", "2022-07-22 19:13:04.205844"], ["updated_at", "2022-07-22 19:13:04.205844"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 938], ["total", 500], ["created_at", "2022-07-22 19:13:04.207274"], ["updated_at", "2022-07-22 19:13:04.207274"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 940], ["total", 1], ["created_at", "2022-07-22 19:13:04.208593"], ["updated_at", "2022-07-22 19:13:04.208593"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" -- WHERE (total > 1000)[0m
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 71], ["admin", 0], ["created_at", "2022-07-22 19:13:04.212020"], ["updated_at", "2022-07-22 19:13:04.212020"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 47], ["admin", 0], ["created_at", "2022-07-22 19:13:04.213395"], ["updated_at", "2022-07-22 19:13:04.213395"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 38], ["admin", 0], ["created_at", "2022-07-22 19:13:04.214690"], ["updated_at", "2022-07-22 19:13:04.214690"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 59], ["admin", 0], ["created_at", "2022-07-22 19:13:04.216060"], ["updated_at", "2022-07-22 19:13:04.216060"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 38], ["admin", 0], ["created_at", "2022-07-22 19:13:04.217451"], ["updated_at", "2022-07-22 19:13:04.217451"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 71], ["admin", 1], ["created_at", "2022-07-22 19:13:04.218814"], ["updated_at", "2022-07-22 19:13:04.218814"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 943], ["total", 10], ["created_at", "2022-07-22 19:13:04.220558"], ["updated_at", "2022-07-22 19:13:04.220558"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 944], ["total", 500], ["created_at", "2022-07-22 19:13:04.221853"], ["updated_at", "2022-07-22 19:13:04.221853"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 946], ["total", 1], ["created_at", "2022-07-22 19:13:04.223055"], ["updated_at", "2022-07-22 19:13:04.223055"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (id > 1) [0m
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 27], ["admin", 0], ["created_at", "2022-07-22 19:13:04.226205"], ["updated_at", "2022-07-22 19:13:04.226205"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 32], ["admin", 0], ["created_at", "2022-07-22 19:13:04.227580"], ["updated_at", "2022-07-22 19:13:04.227580"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 71], ["admin", 0], ["created_at", "2022-07-22 19:13:04.229048"], ["updated_at", "2022-07-22 19:13:04.229048"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 61], ["admin", 0], ["created_at", "2022-07-22 19:13:04.230457"], ["updated_at", "2022-07-22 19:13:04.230457"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 22], ["admin", 0], ["created_at", "2022-07-22 19:13:04.231665"], ["updated_at", "2022-07-22 19:13:04.231665"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 74], ["admin", 1], ["created_at", "2022-07-22 19:13:04.232859"], ["updated_at", "2022-07-22 19:13:04.232859"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 949], ["total", 10], ["created_at", "2022-07-22 19:13:04.234465"], ["updated_at", "2022-07-22 19:13:04.234465"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 950], ["total", 500], ["created_at", "2022-07-22 19:13:04.235607"], ["updated_at", "2022-07-22 19:13:04.235607"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 952], ["total", 1], ["created_at", "2022-07-22 19:13:04.236794"], ["updated_at", "2022-07-22 19:13:04.236794"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE NOT (admin = 1 OR id IN (?)) OR 1=1 --))[0m
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 57], ["admin", 0], ["created_at", "2022-07-22 19:13:04.240106"], ["updated_at", "2022-07-22 19:13:04.240106"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 32], ["admin", 0], ["created_at", "2022-07-22 19:13:04.241467"], ["updated_at", "2022-07-22 19:13:04.241467"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 35], ["admin", 0], ["created_at", "2022-07-22 19:13:04.242938"], ["updated_at", "2022-07-22 19:13:04.242938"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 35], ["admin", 0], ["created_at", "2022-07-22 19:13:04.244268"], ["updated_at", "2022-07-22 19:13:04.244268"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 50], ["admin", 0], ["created_at", "2022-07-22 19:13:04.245534"], ["updated_at", "2022-07-22 19:13:04.245534"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 64], ["admin", 1], ["created_at", "2022-07-22 19:13:04.246685"], ["updated_at", "2022-07-22 19:13:04.246685"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 955], ["total", 10], ["created_at", "2022-07-22 19:13:04.248233"], ["updated_at", "2022-07-22 19:13:04.248233"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 956], ["total", 500], ["created_at", "2022-07-22 19:13:04.249586"], ["updated_at", "2022-07-22 19:13:04.249586"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 958], ["total", 1], ["created_at", "2022-07-22 19:13:04.250841"], ["updated_at", "2022-07-22 19:13:04.250841"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT * FROM users WHERE admin = '1' ; FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 19], ["admin", 0], ["created_at", "2022-07-22 19:13:04.253855"], ["updated_at", "2022-07-22 19:13:04.253855"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 29], ["admin", 0], ["created_at", "2022-07-22 19:13:04.256089"], ["updated_at", "2022-07-22 19:13:04.256089"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 57], ["admin", 0], ["created_at", "2022-07-22 19:13:04.257526"], ["updated_at", "2022-07-22 19:13:04.257526"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 68], ["admin", 0], ["created_at", "2022-07-22 19:13:04.258907"], ["updated_at", "2022-07-22 19:13:04.258907"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 57], ["admin", 0], ["created_at", "2022-07-22 19:13:04.260114"], ["updated_at", "2022-07-22 19:13:04.260114"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 38], ["admin", 1], ["created_at", "2022-07-22 19:13:04.261259"], ["updated_at", "2022-07-22 19:13:04.261259"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 961], ["total", 10], ["created_at", "2022-07-22 19:13:04.262786"], ["updated_at", "2022-07-22 19:13:04.262786"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 962], ["total", 500], ["created_at", "2022-07-22 19:13:04.263971"], ["updated_at", "2022-07-22 19:13:04.263971"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 964], ["total", 1], ["created_at", "2022-07-22 19:13:04.265212"], ["updated_at", "2022-07-22 19:13:04.265212"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT * FROM orders --  FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 42], ["admin", 0], ["created_at", "2022-07-22 19:13:04.268203"], ["updated_at", "2022-07-22 19:13:04.268203"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 27], ["admin", 0], ["created_at", "2022-07-22 19:13:04.269551"], ["updated_at", "2022-07-22 19:13:04.269551"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 41], ["admin", 0], ["created_at", "2022-07-22 19:13:04.270798"], ["updated_at", "2022-07-22 19:13:04.270798"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 65], ["admin", 0], ["created_at", "2022-07-22 19:13:04.272058"], ["updated_at", "2022-07-22 19:13:04.272058"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 69], ["admin", 0], ["created_at", "2022-07-22 19:13:04.273220"], ["updated_at", "2022-07-22 19:13:04.273220"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 47], ["admin", 1], ["created_at", "2022-07-22 19:13:04.274441"], ["updated_at", "2022-07-22 19:13:04.274441"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 967], ["total", 10], ["created_at", "2022-07-22 19:13:04.276035"], ["updated_at", "2022-07-22 19:13:04.276035"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 968], ["total", 500], ["created_at", "2022-07-22 19:13:04.277270"], ["updated_at", "2022-07-22 19:13:04.277270"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 970], ["total", 1], ["created_at", "2022-07-22 19:13:04.278329"], ["updated_at", "2022-07-22 19:13:04.278329"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name = '') OR 1--' AND password = '')[0m
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.5ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 71], ["admin", 0], ["created_at", "2022-07-22 19:13:04.281856"], ["updated_at", "2022-07-22 19:13:04.281856"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 31], ["admin", 0], ["created_at", "2022-07-22 19:13:04.283233"], ["updated_at", "2022-07-22 19:13:04.283233"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 41], ["admin", 0], ["created_at", "2022-07-22 19:13:04.284645"], ["updated_at", "2022-07-22 19:13:04.284645"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 40], ["admin", 0], ["created_at", "2022-07-22 19:13:04.285982"], ["updated_at", "2022-07-22 19:13:04.285982"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 23], ["admin", 0], ["created_at", "2022-07-22 19:13:04.287390"], ["updated_at", "2022-07-22 19:13:04.287390"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 64], ["admin", 1], ["created_at", "2022-07-22 19:13:04.288622"], ["updated_at", "2022-07-22 19:13:04.288622"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 973], ["total", 10], ["created_at", "2022-07-22 19:13:04.290350"], ["updated_at", "2022-07-22 19:13:04.290350"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 974], ["total", 500], ["created_at", "2022-07-22 19:13:04.291696"], ["updated_at", "2022-07-22 19:13:04.291696"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 976], ["total", 1], ["created_at", "2022-07-22 19:13:04.292998"], ["updated_at", "2022-07-22 19:13:04.292998"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? AND (age > 1=1) OR 1=1--)[0m  [["name", "Bob"]]
+  ↳ app/controllers/query_controller.rb:20:in `Array'
+  [1m[36mOrder Delete All (0.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 54], ["admin", 0], ["created_at", "2022-07-22 19:13:04.296539"], ["updated_at", "2022-07-22 19:13:04.296539"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 37], ["admin", 0], ["created_at", "2022-07-22 19:13:04.297874"], ["updated_at", "2022-07-22 19:13:04.297874"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 41], ["admin", 0], ["created_at", "2022-07-22 19:13:04.299098"], ["updated_at", "2022-07-22 19:13:04.299098"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 52], ["admin", 0], ["created_at", "2022-07-22 19:13:04.300544"], ["updated_at", "2022-07-22 19:13:04.300544"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 75], ["admin", 0], ["created_at", "2022-07-22 19:13:04.301829"], ["updated_at", "2022-07-22 19:13:04.301829"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 48], ["admin", 1], ["created_at", "2022-07-22 19:13:04.302993"], ["updated_at", "2022-07-22 19:13:04.302993"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 979], ["total", 10], ["created_at", "2022-07-22 19:13:04.304659"], ["updated_at", "2022-07-22 19:13:04.304659"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 980], ["total", 500], ["created_at", "2022-07-22 19:13:04.306008"], ["updated_at", "2022-07-22 19:13:04.306008"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 982], ["total", 1], ["created_at", "2022-07-22 19:13:04.307241"], ["updated_at", "2022-07-22 19:13:04.307241"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET admin = 1 WHERE name LIKE '%' OR 1=1;%'[0m
+  ↳ (eval):1:in `block in examples'
+  [1m[36mOrder Delete All (0.3ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  ↳ app/controllers/query_controller.rb:73:in `reset_database'
+  [1m[36mUser Delete All (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/controllers/query_controller.rb:74:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["password", "[FILTERED]"], ["age", 38], ["admin", 0], ["created_at", "2022-07-22 19:13:04.310305"], ["updated_at", "2022-07-22 19:13:04.310305"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jim"], ["password", "[FILTERED]"], ["age", 48], ["admin", 0], ["created_at", "2022-07-22 19:13:04.311647"], ["updated_at", "2022-07-22 19:13:04.311647"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sarah"], ["password", "[FILTERED]"], ["age", 62], ["admin", 0], ["created_at", "2022-07-22 19:13:04.313098"], ["updated_at", "2022-07-22 19:13:04.313098"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tina"], ["password", "[FILTERED]"], ["age", 41], ["admin", 0], ["created_at", "2022-07-22 19:13:04.314315"], ["updated_at", "2022-07-22 19:13:04.314315"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tony"], ["password", "[FILTERED]"], ["age", 50], ["admin", 0], ["created_at", "2022-07-22 19:13:04.315542"], ["updated_at", "2022-07-22 19:13:04.315542"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "age", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["password", "[FILTERED]"], ["age", 45], ["admin", 1], ["created_at", "2022-07-22 19:13:04.316685"], ["updated_at", "2022-07-22 19:13:04.316685"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 985], ["total", 10], ["created_at", "2022-07-22 19:13:04.318294"], ["updated_at", "2022-07-22 19:13:04.318294"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 986], ["total", 500], ["created_at", "2022-07-22 19:13:04.319599"], ["updated_at", "2022-07-22 19:13:04.319599"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mOrder Create (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 988], ["total", 1], ["created_at", "2022-07-22 19:13:04.321751"], ["updated_at", "2022-07-22 19:13:04.321751"]]
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/query_controller.rb:75:in `reset_database'
+  Rendering layout layouts/examples.html.erb
+  Rendering query/examples.html.erb within layouts/examples
+  Rendered query/_example.html.erb (Duration: 7.9ms | Allocations: 10758)
+  Rendered query/_example.html.erb (Duration: 1.4ms | Allocations: 6083)
+  Rendered query/_example.html.erb (Duration: 1.3ms | Allocations: 6079)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 6061)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 5936)
+  Rendered query/_example.html.erb (Duration: 1.3ms | Allocations: 5981)
+  Rendered query/_example.html.erb (Duration: 1.3ms | Allocations: 6002)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 6122)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 6019)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 5997)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 6066)
+  Rendered query/_example.html.erb (Duration: 1.1ms | Allocations: 5939)
+  Rendered query/_example.html.erb (Duration: 2.6ms | Allocations: 5969)
+  Rendered query/_example.html.erb (Duration: 1.4ms | Allocations: 6110)
+  Rendered query/_example.html.erb (Duration: 1.3ms | Allocations: 6120)
+  Rendered query/_example.html.erb (Duration: 1.2ms | Allocations: 6053)
+  Rendered query/examples.html.erb within layouts/examples (Duration: 29.4ms | Allocations: 103167)
+  Rendered layout layouts/examples.html.erb (Duration: 53.5ms | Allocations: 134316)
+Completed 200 OK in 335ms (Views: 56.2ms | ActiveRecord: 81.6ms | Allocations: 461666)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-07-22 15:13:04 -0400 ===
+- Goodbye!
+Exiting
